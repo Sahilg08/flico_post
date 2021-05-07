@@ -38,10 +38,10 @@ const CretePost = ()=>{
   
    const postDetails = ()=>{
        const data = new FormData()
-       data.append("file",image)
+       data.append("file",image[0])
        data.append("upload_preset","new-insta")
-       data.append("cloud_name","abhish")
-       fetch("https://api.cloudinary.com/v1_1/abhish/image/upload",{
+       data.append("cloud_name","sahilg08")
+       fetch("https://api.cloudinary.com/v1_1/sahilg08/image/upload",{
            method:"post",
            body:data
        })
@@ -81,7 +81,8 @@ const CretePost = ()=>{
            <div className="file-field input-field">
             <div className="btn #64b5f6 blue darken-1">
                 <span>Uplaod Image</span>
-                <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
+                <input type="file" multiple onChange={(e)=>setImage(e.target.files)                  
+                   } />
             </div>
             <div className="file-path-wrapper">
                 <input className="file-path validate" type="text" />

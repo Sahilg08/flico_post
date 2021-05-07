@@ -4,7 +4,7 @@ import {UserContext} from '../../App'
 const Profile  = ()=>{
     const [mypics,setPics] = useState([])
     const {state,dispatch} = useContext(UserContext)
-    const [image,setImage] = useState("")
+    const [image,setImage] = useState()
     useEffect(()=>{
        fetch('/mypost',{
            headers:{
@@ -21,8 +21,8 @@ const Profile  = ()=>{
         const data = new FormData()
         data.append("file",image)
         data.append("upload_preset","insta-clone")
-        data.append("cloud_name","abhish")
-        fetch("https://api.cloudinary.com/v1_1/abhish/image/upload",{
+        data.append("cloud_name","sahilg08")
+        fetch("https://api.cloudinary.com/v1_1/sahilg08/image/upload",{
             method:"post",
             body:data
         })

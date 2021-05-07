@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const mongoose  = require('mongoose')
 const PORT = process.env.PORT || 5000
-const {MONGOURI} = require('./config/keys')
+const {MONGOURI} = require('./config/keys');
+console.log("MongoUri",MONGOURI)
 
 
 mongoose.connect(MONGOURI,{
